@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		494BBCED1B41CC8300D9C0F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBCEC1B41CC8300D9C0F2 /* main.m */; };
 		494BBCF01B41CC8300D9C0F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBCEF1B41CC8300D9C0F2 /* AppDelegate.m */; };
-		494BBCF31B41CC8300D9C0F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBCF21B41CC8300D9C0F2 /* ViewController.m */; };
+		494BBCF31B41CC8300D9C0F2 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBCF21B41CC8300D9C0F2 /* AlarmViewController.m */; };
 		494BBCF61B41CC8300D9C0F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494BBCF41B41CC8300D9C0F2 /* Main.storyboard */; };
 		494BBCF81B41CC8300D9C0F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494BBCF71B41CC8300D9C0F2 /* Images.xcassets */; };
 		494BBCFB1B41CC8300D9C0F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */; };
@@ -32,8 +32,8 @@
 		494BBCEC1B41CC8300D9C0F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		494BBCEE1B41CC8300D9C0F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		494BBCEF1B41CC8300D9C0F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		494BBCF11B41CC8300D9C0F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		494BBCF21B41CC8300D9C0F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		494BBCF11B41CC8300D9C0F2 /* AlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		494BBCF21B41CC8300D9C0F2 /* AlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 		494BBCF51B41CC8300D9C0F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		494BBCF71B41CC8300D9C0F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		494BBCFA1B41CC8300D9C0F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 			children = (
 				494BBCEE1B41CC8300D9C0F2 /* AppDelegate.h */,
 				494BBCEF1B41CC8300D9C0F2 /* AppDelegate.m */,
-				494BBCF11B41CC8300D9C0F2 /* ViewController.h */,
-				494BBCF21B41CC8300D9C0F2 /* ViewController.m */,
+				494BBCF11B41CC8300D9C0F2 /* AlarmViewController.h */,
+				494BBCF21B41CC8300D9C0F2 /* AlarmViewController.m */,
 				494BBCF41B41CC8300D9C0F2 /* Main.storyboard */,
 				494BBCF71B41CC8300D9C0F2 /* Images.xcassets */,
 				494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494BBCF31B41CC8300D9C0F2 /* ViewController.m in Sources */,
+				494BBCF31B41CC8300D9C0F2 /* AlarmViewController.m in Sources */,
 				494BBCF01B41CC8300D9C0F2 /* AppDelegate.m in Sources */,
 				494BBCED1B41CC8300D9C0F2 /* main.m in Sources */,
 			);
@@ -418,6 +418,7 @@
 				494BBD0C1B41CC8300D9C0F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		494BBD0D1B41CC8300D9C0F2 /* Build configuration list for PBXNativeTarget "WakeUpTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				494BBD0F1B41CC8300D9C0F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

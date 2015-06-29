@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AlarmViewController.h
 //  WakeUp
 //
 //  Created by Judy Mai on 6/29/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface AlarmViewController : UIViewController
 
 
 @end

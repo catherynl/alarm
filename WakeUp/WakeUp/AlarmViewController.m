@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  AlarmViewController.m
 //  WakeUp
 //
 //  Created by Judy Mai on 6/29/15.
 //  Copyright (c) 2015 BigNerdRanch. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AlarmViewController.h"
 
-@interface ViewController ()
+@interface AlarmViewController ()
 
 @end
 
-@implementation ViewController
+@implementation AlarmViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
