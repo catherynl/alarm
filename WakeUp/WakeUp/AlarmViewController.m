@@ -16,12 +16,20 @@
 
 @implementation AlarmViewController
 
-- (IBAction)setButtonPressed:(id)sender {
+- (IBAction)setAlarmButtonPressed:(id)sender {
+    NSDate *date = self.datePicker.date;
+    NSLog(@"Setting an alarm for %@", date);
+    
+    UILocalNotification *note = [[UILocalNotification alloc] init];
+    note.alertBody = @"Hypnotize me!";
+    note.fireDate = date;
+    [[UIApplication sharedApplication] scheduleLocalNotification:note];
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.datePicker.datePickerMode = UIDatePickerModeTime;
     // Do any additional setup after loading the view, typically from a nib.
 }
 

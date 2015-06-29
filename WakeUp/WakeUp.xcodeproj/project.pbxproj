@@ -16,6 +16,7 @@
 		494BBD071B41CC8300D9C0F2 /* WakeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD061B41CC8300D9C0F2 /* WakeUpTests.m */; };
 		C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D61B41CF9300A037A3 /* RemindersViewController.m */; };
 		C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D91B41CFD900A037A3 /* MusicViewController.m */; };
+		C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		C12E88D61B41CF9300A037A3 /* RemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersViewController.m; sourceTree = "<group>"; };
 		C12E88D81B41CFD900A037A3 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		C12E88D91B41CFD900A037A3 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		C12E88DB1B41EAAD00A037A3 /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
+		C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				C12E88D61B41CF9300A037A3 /* RemindersViewController.m */,
 				C12E88D81B41CFD900A037A3 /* MusicViewController.h */,
 				C12E88D91B41CFD900A037A3 /* MusicViewController.m */,
+				C12E88DB1B41EAAD00A037A3 /* ChooseViewController.h */,
+				C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */,
 				494BBCF41B41CC8300D9C0F2 /* Main.storyboard */,
 				494BBCF71B41CC8300D9C0F2 /* Images.xcassets */,
 				494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */,
@@ -232,6 +237,7 @@
 				C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */,
 				C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */,
 				494BBCF31B41CC8300D9C0F2 /* AlarmViewController.m in Sources */,
+				C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */,
 				494BBCF01B41CC8300D9C0F2 /* AppDelegate.m in Sources */,
 				494BBCED1B41CC8300D9C0F2 /* main.m in Sources */,
 			);
