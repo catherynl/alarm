@@ -15,6 +15,7 @@
 		494BBCFB1B41CC8300D9C0F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */; };
 		494BBD071B41CC8300D9C0F2 /* WakeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD061B41CC8300D9C0F2 /* WakeUpTests.m */; };
 		494BBD121B41EA7900D9C0F2 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD111B41EA7900D9C0F2 /* DrawView.m */; };
+		494BBD4F1B42054700D9C0F2 /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD4E1B42054700D9C0F2 /* MathViewController.m */; };
 		C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D61B41CF9300A037A3 /* RemindersViewController.m */; };
 		C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D91B41CFD900A037A3 /* MusicViewController.m */; };
 		C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */; };
@@ -46,6 +47,8 @@
 		494BBD061B41CC8300D9C0F2 /* WakeUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WakeUpTests.m; sourceTree = "<group>"; };
 		494BBD101B41EA7900D9C0F2 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		494BBD111B41EA7900D9C0F2 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		494BBD4D1B42054700D9C0F2 /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathViewController.h; sourceTree = "<group>"; };
+		494BBD4E1B42054700D9C0F2 /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathViewController.m; sourceTree = "<group>"; };
 		C12E88D51B41CF9300A037A3 /* RemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersViewController.h; sourceTree = "<group>"; };
 		C12E88D61B41CF9300A037A3 /* RemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersViewController.m; sourceTree = "<group>"; };
 		C12E88D81B41CFD900A037A3 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */,
 				494BBCF41B41CC8300D9C0F2 /* Main.storyboard */,
 				494BBCF71B41CC8300D9C0F2 /* Images.xcassets */,
+				494BBD4D1B42054700D9C0F2 /* MathViewController.h */,
+				494BBD4E1B42054700D9C0F2 /* MathViewController.m */,
 				494BBD101B41EA7900D9C0F2 /* DrawView.h */,
 				494BBD111B41EA7900D9C0F2 /* DrawView.m */,
 				494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494BBD4F1B42054700D9C0F2 /* MathViewController.m in Sources */,
 				C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */,
 				C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */,
 				494BBD121B41EA7900D9C0F2 /* DrawView.m in Sources */,
