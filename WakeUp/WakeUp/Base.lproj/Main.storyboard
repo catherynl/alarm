@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="v5g-ec-GXT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderViewCell" id="v5g-ec-GXT">
                                 <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v5g-ec-GXT" id="qrM-Yx-aUD">
@@ -76,12 +76,12 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-zk-Wlk">
-                                <rect key="frame" x="275" y="441" width="50" height="30"/>
+                                <rect key="frame" x="270" y="441" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2ct-9l-SOv"/>
-                                    <constraint firstAttribute="width" constant="50" id="vkQ-Od-Gfb"/>
+                                    <constraint firstAttribute="width" constant="60" id="60z-12-0YP"/>
                                 </constraints>
-                                <state key="normal" title="Set"/>
+                                <state key="normal" title="Set time"/>
                                 <connections>
                                     <action selector="setButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEX-8f-0YV"/>
                                 </connections>
