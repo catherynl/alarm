@@ -14,6 +14,7 @@
 		494BBCF81B41CC8300D9C0F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494BBCF71B41CC8300D9C0F2 /* Images.xcassets */; };
 		494BBCFB1B41CC8300D9C0F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */; };
 		494BBD071B41CC8300D9C0F2 /* WakeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD061B41CC8300D9C0F2 /* WakeUpTests.m */; };
+		494BBD121B41EA7900D9C0F2 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD111B41EA7900D9C0F2 /* DrawView.m */; };
 		C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D61B41CF9300A037A3 /* RemindersViewController.m */; };
 		C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D91B41CFD900A037A3 /* MusicViewController.m */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,8 @@
 		494BBD001B41CC8300D9C0F2 /* WakeUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakeUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		494BBD051B41CC8300D9C0F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494BBD061B41CC8300D9C0F2 /* WakeUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WakeUpTests.m; sourceTree = "<group>"; };
+		494BBD101B41EA7900D9C0F2 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		494BBD111B41EA7900D9C0F2 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		C12E88D51B41CF9300A037A3 /* RemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersViewController.h; sourceTree = "<group>"; };
 		C12E88D61B41CF9300A037A3 /* RemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersViewController.m; sourceTree = "<group>"; };
 		C12E88D81B41CFD900A037A3 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				C12E88D91B41CFD900A037A3 /* MusicViewController.m */,
 				494BBCF41B41CC8300D9C0F2 /* Main.storyboard */,
 				494BBCF71B41CC8300D9C0F2 /* Images.xcassets */,
+				494BBD101B41EA7900D9C0F2 /* DrawView.h */,
+				494BBD111B41EA7900D9C0F2 /* DrawView.m */,
 				494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */,
 				494BBCEA1B41CC8300D9C0F2 /* Supporting Files */,
 			);
@@ -231,6 +236,7 @@
 			files = (
 				C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */,
 				C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */,
+				494BBD121B41EA7900D9C0F2 /* DrawView.m in Sources */,
 				494BBCF31B41CC8300D9C0F2 /* AlarmViewController.m in Sources */,
 				494BBCF01B41CC8300D9C0F2 /* AppDelegate.m in Sources */,
 				494BBCED1B41CC8300D9C0F2 /* main.m in Sources */,
