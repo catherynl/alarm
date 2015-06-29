@@ -19,6 +19,7 @@
 		C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D61B41CF9300A037A3 /* RemindersViewController.m */; };
 		C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D91B41CFD900A037A3 /* MusicViewController.m */; };
 		C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */; };
+		C12E88E01B4205B500A037A3 /* RemindersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		C12E88D91B41CFD900A037A3 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		C12E88DB1B41EAAD00A037A3 /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
 		C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
+		C12E88DE1B4205B500A037A3 /* RemindersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersTableViewCell.h; sourceTree = "<group>"; };
+		C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				494BBCF21B41CC8300D9C0F2 /* AlarmViewController.m */,
 				C12E88D51B41CF9300A037A3 /* RemindersViewController.h */,
 				C12E88D61B41CF9300A037A3 /* RemindersViewController.m */,
+				C12E88DE1B4205B500A037A3 /* RemindersTableViewCell.h */,
+				C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */,
 				C12E88D81B41CFD900A037A3 /* MusicViewController.h */,
 				C12E88D91B41CFD900A037A3 /* MusicViewController.m */,
 				C12E88DB1B41EAAD00A037A3 /* ChooseViewController.h */,
@@ -252,6 +257,7 @@
 				C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */,
 				494BBCF01B41CC8300D9C0F2 /* AppDelegate.m in Sources */,
 				494BBCED1B41CC8300D9C0F2 /* main.m in Sources */,
+				C12E88E01B4205B500A037A3 /* RemindersTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
