@@ -1,2 +1,5 @@
 #XCode file
 *.xcodeproj
+*/UserInterfaceState.xcuserstate
+
+WakeUp/WakeUp/Base.lproj/Main.storyboard
