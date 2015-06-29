@@ -10,13 +10,24 @@
 
 @interface AlarmViewController ()
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+
 @end
 
 @implementation AlarmViewController
 
+- (IBAction)setButtonPressed:(id)sender {
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:60];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D2134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D2134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HJf-M1-wxe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Alarm View Controller-->
+        <!--Reminders-->
+        <scene sceneID="d2g-cV-R3g">
+            <objects>
+                <viewController title="Reminders" id="uWk-3i-CQE" customClass="RemindersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fMY-aN-Kcj"/>
+                        <viewControllerLayoutGuide type="bottom" id="OXs-q6-WSq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Sh-Ii-JOr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reminders" id="kND-cx-PSS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qvd-bn-W2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="578"/>
+        </scene>
+        <!--Music-->
+        <scene sceneID="aSz-XT-X3P">
+            <objects>
+                <viewController id="sPw-0t-BLX" customClass="MusicViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yfX-VP-dyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ymH-S0-Nx8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="85d-vR-wzq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Music" id="yz6-oL-UzV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gU3-eK-24H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="1322"/>
+        </scene>
+        <!--Alarm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AlarmViewController" sceneMemberID="viewController">
+                <viewController title="Alarm" id="BYZ-38-t0r" customClass="AlarmViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +55,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0FS-b7-bJP">
+                                <rect key="frame" x="20" y="90" width="560" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="457298136.90135199">
+                                    <!--2015-06-29 19:15:36 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="rss-I2-cvX"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-zk-Wlk">
+                                <rect key="frame" x="285" y="441" width="30" height="30"/>
+                                <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="setButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEX-8f-0YV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0FS-b7-bJP" secondAttribute="trailing" id="OGo-fu-lq0"/>
+                            <constraint firstItem="0FS-b7-bJP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="kH6-M7-vRf"/>
+                            <constraint firstItem="0FS-b7-bJP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vpG-GX-Lcc"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Alarm" id="Fof-XI-nG5"/>
+                    <connections>
+                        <outlet property="datePicker" destination="0FS-b7-bJP" id="WUq-7x-1Sa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1504" y="-160"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SGE-KA-eKm">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HJf-M1-wxe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="LUc-yZ-oQT">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Kcf-cb-Onm"/>
+                        <segue destination="uWk-3i-CQE" kind="relationship" relationship="viewControllers" id="YFo-0l-vOI"/>
+                        <segue destination="sPw-0t-BLX" kind="relationship" relationship="viewControllers" id="kpG-fb-tr0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZu-g2-yye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="578"/>
         </scene>
     </scenes>
 </document>
