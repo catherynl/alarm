@@ -7,21 +7,31 @@
     </dependencies>
     <scenes>
         <!--Reminders-->
-        <scene sceneID="d2g-cV-R3g">
+        <scene sceneID="Slg-fR-JyE">
             <objects>
-                <viewController title="Reminders" id="uWk-3i-CQE" customClass="RemindersViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fMY-aN-Kcj"/>
-                        <viewControllerLayoutGuide type="bottom" id="OXs-q6-WSq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7Sh-Ii-JOr">
+                <tableViewController id="sXW-0n-DCO" customClass="RemindersViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mom-sZ-8Lv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Reminders" id="kND-cx-PSS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qvd-bn-W2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="v5g-ec-GXT">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v5g-ec-GXT" id="qrM-Yx-aUD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sXW-0n-DCO" id="3w9-uw-YpM"/>
+                            <outlet property="delegate" destination="sXW-0n-DCO" id="pJ8-Vo-v7d"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Reminders" id="MbZ-4y-Whb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2j-99-Qr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1504" y="578"/>
         </scene>
@@ -65,8 +75,12 @@
                                     <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="rss-I2-cvX"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-zk-Wlk">
-                                <rect key="frame" x="285" y="441" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-zk-Wlk">
+                                <rect key="frame" x="275" y="441" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2ct-9l-SOv"/>
+                                    <constraint firstAttribute="width" constant="50" id="vkQ-Od-Gfb"/>
+                                </constraints>
                                 <state key="normal" title="Set"/>
                                 <connections>
                                     <action selector="setButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEX-8f-0YV"/>
@@ -75,7 +89,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rWu-zk-Wlk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1rt-IA-Aq2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0FS-b7-bJP" secondAttribute="trailing" id="OGo-fu-lq0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rWu-zk-Wlk" secondAttribute="bottom" constant="80" id="Ovx-1J-Kam"/>
                             <constraint firstItem="0FS-b7-bJP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="kH6-M7-vRf"/>
                             <constraint firstItem="0FS-b7-bJP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vpG-GX-Lcc"/>
                         </constraints>
@@ -101,7 +117,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Kcf-cb-Onm"/>
-                        <segue destination="uWk-3i-CQE" kind="relationship" relationship="viewControllers" id="YFo-0l-vOI"/>
+                        <segue destination="sXW-0n-DCO" kind="relationship" relationship="viewControllers" id="HGn-iW-kJU"/>
                         <segue destination="sPw-0t-BLX" kind="relationship" relationship="viewControllers" id="kpG-fb-tr0"/>
                     </connections>
                 </tabBarController>
