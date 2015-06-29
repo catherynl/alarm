@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChooseViewController : UIViewController
+@interface ChooseViewController : UIViewController <UIAlertViewDelegate>
 
 @end

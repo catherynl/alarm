@@ -20,8 +20,15 @@
     NSDate *date = self.datePicker.date;
     NSLog(@"Setting an alarm for %@", date);
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alarm set!"
+                                                    message:@"Be ready to wake up tomorrow!"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
     UILocalNotification *note = [[UILocalNotification alloc] init];
-    note.alertBody = @"Hypnotize me!";
+    note.alertBody = @"Alarm set!";
     note.fireDate = date;
     [[UIApplication sharedApplication] scheduleLocalNotification:note];
 }
@@ -29,7 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.datePicker.datePickerMode = UIDatePickerModeTime;
+//    self.datePicker.datePickerMode = UIDatePickerModeTime;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
