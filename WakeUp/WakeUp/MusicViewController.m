@@ -31,6 +31,9 @@
     }
     [self registerMediaPlayerNotifications];
     self.setMusicTimeButton.titleLabel.text = @"Set Music Timer";
+    self.titleLabel.text = @"Title: unselected";
+    self.artistLabel.text = @"Artist: unselected";
+    self.albumLabel.text = @"Album: unselected";
 }
 
 - (void)viewDidUnload {
