@@ -177,10 +177,14 @@
         self.cField.backgroundColor == [UIColor greenColor] &&
         self.dField.backgroundColor == [UIColor greenColor] &&
         self.eField.backgroundColor == [UIColor greenColor]) {
-        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"navreminderVC"];
         [self.view endEditing:YES];
+        [self performSelector:@selector(moveToReminder) withObject:self afterDelay:0.5 ];
     }
+}
+
+- (void)moveToReminder {
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"navreminderVC"];
 }
 
 - (IBAction)backgroundTapped:(id)sender {

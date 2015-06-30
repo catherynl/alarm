@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet DrawView *drawView;
+@property (weak, nonatomic) IBOutlet UILabel *directionsLabel;
 @property (nonatomic) NSInteger rightCount;
 @end
 
@@ -71,12 +72,16 @@ NSString *symbol;
     }
     if (_rightCount >= 5) {
         self.resultLabel.text = @"Can shut off alarm now";
-        NSLog(@"Shutting off alarm, going to reminders");
-        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"navreminderVC"];
         [self.view endEditing:YES];
+        [self performSelector:@selector(moveToReminder) withObject:self afterDelay:1.0 ];
     }
 }
+
+- (void)moveToReminder {
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"navreminderVC"];
+}
+
 
 - (IBAction)clearButtonIsPressed:(id)sender {
     [self.drawView clearScreen];
@@ -97,15 +102,12 @@ NSString *symbol;
         symbol = @"*";
     }
     self.questionLabel.text = [NSString stringWithFormat:@"What is %d %@ %d?", (int)num1, symbol, (int)num2];
+    if (_rightCount < 5) {
+        self.directionsLabel.text = [NSString stringWithFormat:@"Answer %d question(s) to stop alarm", (int)(5-_rightCount)];
+    } else {
+        self.directionsLabel.text = @"Don't fall back asleep!";
+    }
 }
-
-/*
-- (void)singleTap:(UIGestureRecognizer *)gestureRecognizer {
-    NSLog(@"Single tap!");
-    //    [self becomeFirstResponder];
-    //[textField resignFirstResponder];
-}
- */
 
 
 @end
