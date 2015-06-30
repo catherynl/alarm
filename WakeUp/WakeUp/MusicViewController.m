@@ -124,6 +124,15 @@
 // MARK: IBActions
 
 - (IBAction)setMusicTimePressed:(id)sender {
+    NSDate *date = self.datePicker.date;
+    NSLog(@"Set music to stop at %@", date);
+    NSDate *currentDate = [NSDate date];
+    NSInteger timeInterval = [date timeIntervalSinceDate:currentDate];
+    [NSTimer scheduledTimerWithTimeInterval:timeInterval
+                                     target:self
+                                   selector:@selector(handle_PlaybackStateChanged:)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
 - (IBAction)volumeChanged:(id)sender {
