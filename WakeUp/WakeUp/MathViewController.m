@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *answerField;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (nonatomic) NSInteger rightCount;
 @end
 
 @implementation MathViewController
@@ -22,7 +23,7 @@ NSInteger num1, num2;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.answerField.keyboardType = UIKeyboardTypePhonePad;
+    self.answerField.keyboardType = UIKeyboardTypeNumberPad;
     num1 = arc4random_uniform(10);
     num2 = arc4random_uniform(10);
     self.questionLabel.text = [NSString stringWithFormat:@"What is %d * %d?", (int)num1, (int)num2];
@@ -55,10 +56,16 @@ NSInteger num1, num2;
         NSLog(@"Answered correctly");
         self.resultLabel.text = @"Correct!";
         self.resultLabel.textColor = [UIColor greenColor];
+        _rightCount++;
+        [self showNewQuestion];
     } else {
         NSLog(@"Fail, lrn2math");
         self.resultLabel.text = @"Wrong!";
         self.resultLabel.textColor = [UIColor redColor];
+        [self showNewQuestion];
+    }
+    if (_rightCount >= 5) {
+        self.resultLabel.text = @"Can shut off alarm now";
     }
 }
 
@@ -71,6 +78,13 @@ NSInteger num1, num2;
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
+}
+
+- (void)showNewQuestion {
+    self.answerField.text = @"";
+    num1 = arc4random_uniform(10);
+    num2 = arc4random_uniform(10);
+    self.questionLabel.text = [NSString stringWithFormat:@"What is %d * %d?", (int)num1, (int)num2];
 }
     
 @end

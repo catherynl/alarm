@@ -123,6 +123,14 @@
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97C-My-HwQ" customClass="DrawView">
                                 <rect key="frame" x="16" y="203" width="568" height="377"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1W-uvp">
+                                        <rect key="frame" x="515" y="8" width="39" height="36"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whP-US-54S">
@@ -139,8 +147,12 @@
                                     <action selector="submitIsPressed:" destination="gvC-u4-pvp" eventType="touchUpInside" id="XBL-Od-Iro"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kaa-rf-1N4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kaa-rf-1N4">
                                 <rect key="frame" x="181" y="167" width="239" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="O0f-Ho-eJY"/>
+                                    <constraint firstAttribute="height" constant="21" id="afK-xa-9Vq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -155,11 +167,13 @@
                             <constraint firstItem="97C-My-HwQ" firstAttribute="trailing" secondItem="pXL-e3-9Jl" secondAttribute="trailingMargin" id="J9h-U5-zLm"/>
                             <constraint firstItem="whP-US-54S" firstAttribute="leading" secondItem="cKT-3a-mxq" secondAttribute="trailing" constant="19" id="TML-Lc-Ipd"/>
                             <constraint firstItem="aPn-sp-s3h" firstAttribute="trailing" secondItem="pXL-e3-9Jl" secondAttribute="trailingMargin" id="XvI-lA-9kU"/>
+                            <constraint firstItem="Kaa-rf-1N4" firstAttribute="top" secondItem="cKT-3a-mxq" secondAttribute="bottom" constant="8" id="Y1E-Tl-9bC"/>
                             <constraint firstItem="cKT-3a-mxq" firstAttribute="top" secondItem="aPn-sp-s3h" secondAttribute="bottom" constant="27" id="ZBf-hw-Vno"/>
                             <constraint firstItem="aPn-sp-s3h" firstAttribute="leading" secondItem="pXL-e3-9Jl" secondAttribute="leadingMargin" id="cpf-wU-Xd6"/>
                             <constraint firstAttribute="centerX" secondItem="cKT-3a-mxq" secondAttribute="centerX" constant="-0.5" id="hC8-Q1-LE1"/>
                             <constraint firstItem="aPn-sp-s3h" firstAttribute="top" secondItem="kZd-5W-Mpp" secondAttribute="bottom" constant="61" id="j2W-DP-TDj"/>
                             <constraint firstAttribute="centerX" secondItem="aPn-sp-s3h" secondAttribute="centerX" id="kU2-xH-0fe"/>
+                            <constraint firstAttribute="centerX" secondItem="Kaa-rf-1N4" secondAttribute="centerX" constant="-0.5" id="qaz-9I-JjJ"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTapped:" destination="gvC-u4-pvp" eventType="touchUpInside" id="7xQ-jq-gjA"/>
