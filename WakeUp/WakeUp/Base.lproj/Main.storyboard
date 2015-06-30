@@ -166,7 +166,7 @@
                             <constraint firstItem="RUK-GV-s7s" firstAttribute="leading" secondItem="85d-vR-wzq" secondAttribute="leadingMargin" id="zUg-d4-Yhx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Music" id="yz6-oL-UzV"/>
+                    <tabBarItem key="tabBarItem" title="Music" image="musicIcon2.png" id="yz6-oL-UzV"/>
                     <connections>
                         <outlet property="albumLabel" destination="RUK-GV-s7s" id="p7Q-LF-M1P"/>
                         <outlet property="artistLabel" destination="Lib-E3-TEu" id="58l-rk-0e6"/>
@@ -641,7 +641,7 @@
                             <constraint firstItem="0FS-b7-bJP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="vpG-GX-Lcc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Alarm" id="Fof-XI-nG5"/>
+                    <tabBarItem key="tabBarItem" title="Alarm" image="alarmIcon2.png" id="Fof-XI-nG5"/>
                     <connections>
                         <outlet property="datePicker" destination="0FS-b7-bJP" id="WUq-7x-1Sa"/>
                     </connections>
@@ -674,7 +674,7 @@
         <scene sceneID="0bm-8J-s43">
             <objects>
                 <navigationController storyboardIdentifier="navreminderVC" automaticallyAdjustsScrollViewInsets="NO" id="iDZ-x9-4rs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reminders" id="MbZ-4y-Whb"/>
+                    <tabBarItem key="tabBarItem" title="Reminders" image="editIcon3.png" id="MbZ-4y-Whb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HPZ-K0-7DG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -693,6 +693,9 @@
     <resources>
         <image name="NextButton.png" width="40" height="30"/>
         <image name="PreviousButton.png" width="40" height="30"/>
+        <image name="alarmIcon2.png" width="25" height="25"/>
+        <image name="editIcon3.png" width="25" height="25"/>
+        <image name="musicIcon2.png" width="25" height="25"/>
         <image name="playButton.png" width="40" height="30"/>
     </resources>
 </document>
