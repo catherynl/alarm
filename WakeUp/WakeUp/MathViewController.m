@@ -7,26 +7,28 @@
 //
 
 #import "MathViewController.h"
+#import "DrawView.h"
 
 @interface MathViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UITextField *answerField;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet DrawView *drawView;
 @property (nonatomic) NSInteger rightCount;
 @end
 
 @implementation MathViewController
 
 NSInteger num1, num2;
+NSInteger symbolCount;
+NSString *symbol;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.answerField.keyboardType = UIKeyboardTypeNumberPad;
-    num1 = arc4random_uniform(10);
-    num2 = arc4random_uniform(10);
-    self.questionLabel.text = [NSString stringWithFormat:@"What is %d * %d?", (int)num1, (int)num2];
+    [self showNewQuestion];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,17 +51,18 @@ NSInteger num1, num2;
 }
 
 - (void)sendAnswer {
-    NSInteger ans = num1 * num2;
-    NSLog(@"Ans should be %d", (int)ans);
-    //NSLog(@"User put %d", [self.answerField.text intValue]);
+    NSInteger ans = 0;
+    if (symbolCount == 0) {
+        ans = num1 + num2;
+    } else {
+        ans = num1 * num2;
+    }
     if ([self.answerField.text intValue] == (int)ans) {
-        NSLog(@"Answered correctly");
         self.resultLabel.text = @"Correct!";
         self.resultLabel.textColor = [UIColor greenColor];
         _rightCount++;
         [self showNewQuestion];
     } else {
-        NSLog(@"Fail, lrn2math");
         self.resultLabel.text = @"Wrong!";
         self.resultLabel.textColor = [UIColor redColor];
         [self showNewQuestion];
@@ -72,9 +75,12 @@ NSInteger num1, num2;
 /*
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-       return YES;
+    return YES;
 }
 */
+- (IBAction)clearButtonIsPressed:(id)sender {
+    [self.drawView clearScreen];
+}
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
@@ -84,7 +90,13 @@ NSInteger num1, num2;
     self.answerField.text = @"";
     num1 = arc4random_uniform(10);
     num2 = arc4random_uniform(10);
-    self.questionLabel.text = [NSString stringWithFormat:@"What is %d * %d?", (int)num1, (int)num2];
+    symbolCount = arc4random_uniform(2);
+    if (symbolCount == 0) {
+        symbol = @"+";
+    } else {
+        symbol = @"*";
+    }
+    self.questionLabel.text = [NSString stringWithFormat:@"What is %d %@ %d?", (int)num1, symbol, (int)num2];
 }
     
 @end

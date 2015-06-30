@@ -124,14 +124,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97C-My-HwQ" customClass="DrawView">
                                 <rect key="frame" x="16" y="203" width="568" height="377"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1W-uvp">
-                                        <rect key="frame" x="515" y="8" width="39" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1W-uvp">
+                                        <rect key="frame" x="482" y="13" width="78" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="78" id="qZi-r9-abA"/>
+                                            <constraint firstAttribute="height" constant="42" id="u5z-bL-nFk"/>
+                                        </constraints>
                                         <state key="normal" title="Clear">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearButtonIsPressed:" destination="gvC-u4-pvp" eventType="touchUpInside" id="qVI-bB-Lhp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wFp-1W-uvp" firstAttribute="top" secondItem="97C-My-HwQ" secondAttribute="top" constant="13" id="6Zo-Ar-jlz"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFp-1W-uvp" secondAttribute="trailing" constant="8" id="JlR-hK-MA4"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whP-US-54S">
                                 <rect key="frame" x="368" y="129" width="69" height="30"/>
@@ -177,10 +188,12 @@
                         </constraints>
                         <connections>
                             <action selector="backgroundTapped:" destination="gvC-u4-pvp" eventType="touchUpInside" id="7xQ-jq-gjA"/>
+                            <action selector="drawViewTapped:" destination="gvC-u4-pvp" eventType="touchUpInside" id="lhz-ry-MFF"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="answerField" destination="cKT-3a-mxq" id="A8I-Uk-6ka"/>
+                        <outlet property="drawView" destination="97C-My-HwQ" id="oWt-sm-VDN"/>
                         <outlet property="questionLabel" destination="aPn-sp-s3h" id="QBn-1j-hjC"/>
                         <outlet property="resultLabel" destination="Kaa-rf-1N4" id="8Qp-0h-NS2"/>
                         <outlet property="submitButton" destination="whP-US-54S" id="9NM-Rx-FkX"/>
