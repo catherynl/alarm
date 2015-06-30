@@ -11,6 +11,8 @@
 
 @interface MusicViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *setMusicTimeButton;
+
 @end
 
 @implementation MusicViewController
@@ -28,6 +30,7 @@
         [self.playPauseButton setImage:[UIImage imageNamed:@"playButton.png"] forState:UIControlStateNormal];
     }
     [self registerMediaPlayerNotifications];
+    self.setMusicTimeButton.titleLabel.text = @"Set Music Timer";
 }
 
 - (void)viewDidUnload {
@@ -126,6 +129,7 @@
 - (IBAction)setMusicTimePressed:(id)sender {
     NSDate *date = self.datePicker.date;
     NSLog(@"Set music to stop at %@", date);
+    self.setMusicTimeButton.titleLabel.text = [NSString stringWithFormat:@"Set music timer: %@", date];
     NSDate *currentDate = [NSDate date];
     NSInteger timeInterval = [date timeIntervalSinceDate:currentDate];
     [NSTimer scheduledTimerWithTimeInterval:timeInterval
@@ -149,6 +153,24 @@
     
     [self presentViewController:mediaPicker animated:YES completion:nil];
 }
+
+- (IBAction)previousSong:(id)sender {
+    [self.musicPlayer skipToPreviousItem];
+}
+
+- (IBAction)playPause:(id)sender {
+    if ([self.musicPlayer playbackState] == MPMusicPlaybackStatePlaying) {
+        [self.musicPlayer pause];
+    } else {
+        [self.musicPlayer play];
+    }
+}
+
+- (IBAction)nextSong:(id)sender {
+    [self.musicPlayer skipToNextItem];
+}
+
+// MARK: Handle actions
 
 - (void) mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection
 {
@@ -174,28 +196,13 @@
         [self.playPauseButton setImage:[UIImage imageNamed:@"playButton.png"] forState:UIControlStateNormal];
         [musicPlayer stop];
     }
+    if ([self.setMusicTimeButton.titleLabel.text isEqualToString:@"Set Music Timer"]) {
+        self.setMusicTimeButton.titleLabel.text = @"Set Music Timer";
+    }
 }
 
 - (void) handle_VolumeChanged: (id) notification {
     [self.volumeSlider setValue:[musicPlayer volume]];
-}
-
-// MARK: IBActions
-
-- (IBAction)previousSong:(id)sender {
-    [self.musicPlayer skipToPreviousItem];
-}
-
-- (IBAction)playPause:(id)sender {
-    if ([self.musicPlayer playbackState] == MPMusicPlaybackStatePlaying) {
-        [self.musicPlayer pause];
-    } else {
-        [self.musicPlayer play];
-    }
-}
-
-- (IBAction)nextSong:(id)sender {
-    [self.musicPlayer skipToNextItem];
 }
 
 @end
