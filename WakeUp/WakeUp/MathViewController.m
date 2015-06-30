@@ -9,14 +9,23 @@
 #import "MathViewController.h"
 
 @interface MathViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UITextField *answerField;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @end
 
 @implementation MathViewController
 
+NSInteger num1, num2;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.answerField.keyboardType = UIKeyboardTypePhonePad;
+    num1 = arc4random_uniform(10);
+    num2 = arc4random_uniform(10);
+    self.questionLabel.text = [NSString stringWithFormat:@"What is %d * %d?", (int)num1, (int)num2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +43,34 @@
 }
 */
 
+- (IBAction)submitIsPressed:(id)sender {
+    [self sendAnswer];
+}
+
+- (void)sendAnswer {
+    NSInteger ans = num1 * num2;
+    NSLog(@"Ans should be %d", (int)ans);
+    //NSLog(@"User put %d", [self.answerField.text intValue]);
+    if ([self.answerField.text intValue] == (int)ans) {
+        NSLog(@"Answered correctly");
+        self.resultLabel.text = @"Correct!";
+        self.resultLabel.textColor = [UIColor greenColor];
+    } else {
+        NSLog(@"Fail, lrn2math");
+        self.resultLabel.text = @"Wrong!";
+        self.resultLabel.textColor = [UIColor redColor];
+    }
+}
+
+/*
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+       return YES;
+}
+*/
+
+- (IBAction)backgroundTapped:(id)sender {
+    [self.view endEditing:YES];
+}
+    
 @end

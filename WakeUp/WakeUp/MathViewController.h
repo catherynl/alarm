@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MathViewController : UIViewController
+@interface MathViewController : UIViewController <UITextFieldDelegate>
 
 @end
