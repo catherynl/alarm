@@ -29,6 +29,11 @@
         doubleTapRecognizer.delaysTouchesBegan = YES;
         [self addGestureRecognizer:doubleTapRecognizer];
         
+        UITapGestureRecognizer *singleTapRecognizer =
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
+        singleTapRecognizer.numberOfTapsRequired = 1;
+        singleTapRecognizer.delaysTouchesBegan = YES;
+        [self addGestureRecognizer:singleTapRecognizer];
     }
     return self;
 }
@@ -85,4 +90,8 @@
     [self setNeedsDisplay];
 }
 
+- (void)singleTap:(UIGestureRecognizer *)gestureRecognizer {
+    NSLog(@"Single tap!");
+    //[textField resignFirstResponder];
+}
 @end

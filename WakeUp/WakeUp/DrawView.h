@@ -10,4 +10,6 @@
 
 @interface DrawView : UIView
 
+- (void)clearScreen;
+
 @end
