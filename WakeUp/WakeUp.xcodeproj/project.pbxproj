@@ -20,6 +20,12 @@
 		C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D91B41CFD900A037A3 /* MusicViewController.m */; };
 		C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */; };
 		C12E88E01B4205B500A037A3 /* RemindersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */; };
+		C12E88E21B42117B00A037A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E88E11B42117B00A037A3 /* MediaPlayer.framework */; };
+		C1E35A331B42174000C5E48D /* NextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A2E1B42174000C5E48D /* NextButton.png */; };
+		C1E35A341B42174000C5E48D /* noArtworkImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A2F1B42174000C5E48D /* noArtworkImage.png */; };
+		C1E35A351B42174000C5E48D /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A301B42174000C5E48D /* pauseButton.png */; };
+		C1E35A361B42174000C5E48D /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A311B42174000C5E48D /* playButton.png */; };
+		C1E35A371B42174000C5E48D /* PreviousButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A321B42174000C5E48D /* PreviousButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
 		C12E88DE1B4205B500A037A3 /* RemindersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersTableViewCell.h; sourceTree = "<group>"; };
 		C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersTableViewCell.m; sourceTree = "<group>"; };
+		C12E88E11B42117B00A037A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C1E35A2E1B42174000C5E48D /* NextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextButton.png; sourceTree = "<group>"; };
+		C1E35A2F1B42174000C5E48D /* noArtworkImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noArtworkImage.png; sourceTree = "<group>"; };
+		C1E35A301B42174000C5E48D /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
+		C1E35A311B42174000C5E48D /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		C1E35A321B42174000C5E48D /* PreviousButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PreviousButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12E88E21B42117B00A037A3 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 		494BBCDE1B41CC8300D9C0F2 = {
 			isa = PBXGroup;
 			children = (
+				C12E88E11B42117B00A037A3 /* MediaPlayer.framework */,
 				494BBCE91B41CC8300D9C0F2 /* WakeUp */,
 				494BBD031B41CC8300D9C0F2 /* WakeUpTests */,
 				494BBCE81B41CC8300D9C0F2 /* Products */,
@@ -117,6 +131,11 @@
 				494BBD111B41EA7900D9C0F2 /* DrawView.m */,
 				494BBCF41B41CC8300D9C0F2 /* Main.storyboard */,
 				494BBCF71B41CC8300D9C0F2 /* Images.xcassets */,
+				C1E35A2E1B42174000C5E48D /* NextButton.png */,
+				C1E35A2F1B42174000C5E48D /* noArtworkImage.png */,
+				C1E35A301B42174000C5E48D /* pauseButton.png */,
+				C1E35A311B42174000C5E48D /* playButton.png */,
+				C1E35A321B42174000C5E48D /* PreviousButton.png */,
 				494BBCF91B41CC8300D9C0F2 /* LaunchScreen.xib */,
 				494BBCEA1B41CC8300D9C0F2 /* Supporting Files */,
 			);
@@ -229,8 +248,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E35A331B42174000C5E48D /* NextButton.png in Resources */,
 				494BBCF61B41CC8300D9C0F2 /* Main.storyboard in Resources */,
+				C1E35A351B42174000C5E48D /* pauseButton.png in Resources */,
+				C1E35A341B42174000C5E48D /* noArtworkImage.png in Resources */,
 				494BBCFB1B41CC8300D9C0F2 /* LaunchScreen.xib in Resources */,
+				C1E35A361B42174000C5E48D /* playButton.png in Resources */,
+				C1E35A371B42174000C5E48D /* PreviousButton.png in Resources */,
 				494BBCF81B41CC8300D9C0F2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
