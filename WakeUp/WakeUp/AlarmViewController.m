@@ -18,7 +18,10 @@
 
 - (IBAction)setAlarmButtonPressed:(id)sender {
     NSDate *date = self.datePicker.date;
-    NSLog(@"Setting an alarm for %@", date);
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    NSLog(@"Setting an alarm for %@", [dateFormatter stringFromDate:date]);
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alarm set!"
                                                     message:@"Be ready to wake up tomorrow!"
