@@ -8,7 +8,7 @@
         <!--Reminders-->
         <scene sceneID="Slg-fR-JyE">
             <objects>
-                <tableViewController id="sXW-0n-DCO" customClass="RemindersViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="reminderVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sXW-0n-DCO" customClass="RemindersViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mom-sZ-8Lv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

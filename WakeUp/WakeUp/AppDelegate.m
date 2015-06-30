@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MathViewController.h"
 
 @interface AppDelegate ()
 

@@ -28,7 +28,9 @@ NSString *symbol;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.answerField.keyboardType = UIKeyboardTypeNumberPad;
+    _rightCount = 0;
     [self showNewQuestion];
+    NSLog(@"viewDidLoad");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,15 +71,14 @@ NSString *symbol;
     }
     if (_rightCount >= 5) {
         self.resultLabel.text = @"Can shut off alarm now";
+        NSLog(@"Shutting off alarm, going to reminders");
+        _readyToSwitch = YES;
+        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"reminderVC"];
+        [self.view endEditing:YES];
     }
 }
 
-/*
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return YES;
-}
-*/
 - (IBAction)clearButtonIsPressed:(id)sender {
     [self.drawView clearScreen];
 }
