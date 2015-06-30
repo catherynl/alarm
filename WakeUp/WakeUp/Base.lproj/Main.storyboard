@@ -151,7 +151,6 @@
                         <outlet property="artistLabel" destination="Lib-E3-TEu" id="58l-rk-0e6"/>
                         <outlet property="artworkImageView" destination="7oe-uu-uGm" id="Bok-HI-5m8"/>
                         <outlet property="playPauseButton" destination="urE-Vd-eiE" id="U6o-nX-ek3"/>
-                        <outlet property="showMediaPlayer" destination="28y-HI-mT1" id="jKD-1h-iUQ"/>
                         <outlet property="titleLabel" destination="JxX-kg-d0a" id="6F1-Yc-RM1"/>
                         <outlet property="volumeSlider" destination="Kev-JR-hoR" id="Gwa-Z6-w0V"/>
                     </connections>
