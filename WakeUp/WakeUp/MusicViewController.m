@@ -12,6 +12,7 @@
 @interface MusicViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *setMusicTimeButton;
+@property (weak, nonatomic) IBOutlet UIButton *showMediaPickerButton;
 
 @end
 
@@ -33,6 +34,11 @@
     self.titleLabel.text = @"Title: unselected";
     self.artistLabel.text = @"Artist: unselected";
     self.albumLabel.text = @"Album: unselected";
+    
+    self.setMusicTimeButton.layer.cornerRadius = 15;
+    self.setMusicTimeButton.clipsToBounds = YES;
+    self.showMediaPickerButton.layer.cornerRadius = 15;
+    self.showMediaPickerButton.clipsToBounds = YES;
 }
 
 - (void)viewDidUnload {

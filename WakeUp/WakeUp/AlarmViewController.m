@@ -11,6 +11,8 @@
 @interface AlarmViewController ()
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIButton *setAlarmButton;
+@property (weak, nonatomic) IBOutlet UIButton *chooseVCButton;
 
 @end
 
@@ -28,6 +30,7 @@
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
+    alert.tag = 99;
     [alert show];
     
 //    UILocalNotification *note = [[UILocalNotification alloc] init];
@@ -49,21 +52,42 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"WAKE UP!"
                                                     message:@"It's morning! Time to do some thinking."
                                                    delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
     alert.delegate = self;
+    alert.tag = 100;
     [alert show];
 }
 
 // COME BACK HERE
-- (void)alertViewCancel:(UIAlertView *)alertView {
-    NSLog(@"Alert view cancelled");
-    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-    window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"chooseVC"];
+//- (void)alertViewCancel:(UIAlertView *)alertView {
+//    NSLog(@"Alert view cancelled");
+//    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+//    window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"chooseVC"];
+//}
+//
+//- (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex animated:(BOOL)animated {
+//    NSLog(@"Called dismissWithClickedButtonIndex: %lu", (long)buttonIndex);
+//    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+//    window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"chooseVC"];
+//}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == 99) {
+        NSLog(@"Alert with tag 99 called");
+    } else if (alertView.tag == 100) {
+        NSLog(@"Alert with tag 100 called");
+        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"chooseVC"];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.setAlarmButton.layer.cornerRadius = 15;
+    self.setAlarmButton.clipsToBounds = YES;
+    self.chooseVCButton.layer.cornerRadius = 15;
+    self.setAlarmButton.clipsToBounds = YES;
+    
 //    self.datePicker.datePickerMode = UIDatePickerModeTime;
     // Do any additional setup after loading the view, typically from a nib.
 }

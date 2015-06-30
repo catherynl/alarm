@@ -63,7 +63,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3Pn-Z4-7en"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -72,16 +72,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="TaL-XR-rOY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUK-GV-s7s" userLabel="Album">
-                                <rect key="frame" x="16" y="392" width="568" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="EVl-JP-dis"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -138,6 +129,15 @@
                                     <action selector="showMediaPicker:" destination="sPw-0t-BLX" eventType="touchUpInside" id="LeA-Au-u6g"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUK-GV-s7s" userLabel="Album">
+                                <rect key="frame" x="16" y="392" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EVl-JP-dis"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.75653470393964628" green="0.90703617035979811" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -176,6 +176,7 @@
                         <outlet property="datePicker" destination="1rN-HZ-lmv" id="BrZ-Sc-B4r"/>
                         <outlet property="playPauseButton" destination="urE-Vd-eiE" id="U6o-nX-ek3"/>
                         <outlet property="setMusicTimeButton" destination="iWI-cU-0Gq" id="Ma5-LM-P7T"/>
+                        <outlet property="showMediaPickerButton" destination="28y-HI-mT1" id="A18-Ri-hSQ"/>
                         <outlet property="titleLabel" destination="JxX-kg-d0a" id="6F1-Yc-RM1"/>
                         <outlet property="volumeSlider" destination="Kev-JR-hoR" id="Gwa-Z6-w0V"/>
                     </connections>
@@ -674,7 +675,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Alarm" image="alarmIcon2.png" id="Fof-XI-nG5"/>
                     <connections>
+                        <outlet property="chooseVCButton" destination="V8V-CN-3uc" id="8Dy-7a-lES"/>
                         <outlet property="datePicker" destination="0FS-b7-bJP" id="WUq-7x-1Sa"/>
+                        <outlet property="setAlarmButton" destination="rWu-zk-Wlk" id="tAG-GO-zIF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
