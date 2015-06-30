@@ -56,13 +56,13 @@
                                     <action selector="volumeChanged:" destination="sPw-0t-BLX" eventType="valueChanged" id="sB2-g3-AdY"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxX-kg-d0a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxX-kg-d0a" userLabel="Title">
                                 <rect key="frame" x="16" y="334" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lib-E3-TEu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lib-E3-TEu" userLabel="Artist">
                                 <rect key="frame" x="16" y="363" width="568" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Bv5-xf-E1M"/>
@@ -71,22 +71,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUK-GV-s7s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUK-GV-s7s" userLabel="Album">
                                 <rect key="frame" x="16" y="392" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
-                                <rect key="frame" x="280" y="441" width="40" height="30"/>
-                                <state key="normal" image="playButton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playPause:" destination="sPw-0t-BLX" eventType="touchUpInside" id="5cf-oD-dLw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
                                 <rect key="frame" x="360" y="441" width="40" height="30"/>
                                 <state key="normal" image="NextButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,7 +86,7 @@
                                     <action selector="nextSong:" destination="sPw-0t-BLX" eventType="touchUpInside" id="EyV-WQ-tk9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
                                 <rect key="frame" x="191" y="441" width="40" height="30"/>
                                 <state key="normal" image="PreviousButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -105,13 +96,22 @@
                                     <action selector="showMediaPlayer:" destination="sPw-0t-BLX" eventType="touchUpInside" id="9Tj-z1-MZF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28y-HI-mT1">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28y-HI-mT1">
                                 <rect key="frame" x="234" y="261" width="133" height="30"/>
                                 <state key="normal" title="Show Media Picker">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showMediaPicker:" destination="sPw-0t-BLX" eventType="touchUpInside" id="LeA-Au-u6g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
+                                <rect key="frame" x="280" y="441" width="40" height="30"/>
+                                <state key="normal" image="playButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPause:" destination="sPw-0t-BLX" eventType="touchUpInside" id="5cf-oD-dLw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,6 +124,7 @@
                             <constraint firstItem="urE-Vd-eiE" firstAttribute="top" secondItem="RUK-GV-s7s" secondAttribute="bottom" constant="28" id="FMe-q3-ke4"/>
                             <constraint firstItem="urE-Vd-eiE" firstAttribute="centerX" secondItem="Kev-JR-hoR" secondAttribute="centerX" id="GGI-eI-PCs"/>
                             <constraint firstItem="hof-oM-r0n" firstAttribute="leading" secondItem="urE-Vd-eiE" secondAttribute="trailing" constant="40" id="Gdr-64-0y7"/>
+                            <constraint firstItem="ZVo-Sc-L1z" firstAttribute="centerY" secondItem="urE-Vd-eiE" secondAttribute="centerY" id="GuK-tt-5Yo"/>
                             <constraint firstAttribute="bottom" secondItem="urE-Vd-eiE" secondAttribute="bottom" constant="129" id="IHT-3j-ugh"/>
                             <constraint firstItem="7oe-uu-uGm" firstAttribute="centerX" secondItem="Kev-JR-hoR" secondAttribute="centerX" id="IMS-is-Lu3"/>
                             <constraint firstItem="JxX-kg-d0a" firstAttribute="top" secondItem="28y-HI-mT1" secondAttribute="bottom" constant="43" id="LaX-zZ-yxp"/>
@@ -141,6 +142,7 @@
                             <constraint firstItem="28y-HI-mT1" firstAttribute="top" secondItem="7oe-uu-uGm" secondAttribute="bottom" constant="33" id="ntv-rU-7vI"/>
                             <constraint firstItem="7oe-uu-uGm" firstAttribute="top" secondItem="yfX-VP-dyA" secondAttribute="bottom" constant="8" symbolic="YES" id="q1b-Lp-g2J"/>
                             <constraint firstItem="urE-Vd-eiE" firstAttribute="centerX" secondItem="85d-vR-wzq" secondAttribute="centerX" id="qj6-ib-9Xc"/>
+                            <constraint firstItem="urE-Vd-eiE" firstAttribute="centerY" secondItem="hof-oM-r0n" secondAttribute="centerY" id="qoc-V5-LjJ"/>
                             <constraint firstItem="Lib-E3-TEu" firstAttribute="leading" secondItem="JxX-kg-d0a" secondAttribute="leading" id="taf-rt-Amo"/>
                             <constraint firstItem="Lib-E3-TEu" firstAttribute="leading" secondItem="Kev-JR-hoR" secondAttribute="leading" id="u50-rU-Tce"/>
                         </constraints>
