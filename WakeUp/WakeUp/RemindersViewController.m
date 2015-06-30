@@ -14,6 +14,14 @@
 
 @implementation RemindersViewController
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.navigationItem.title = @"Reminders";
+        self.reminderItems = @[@"Reminder"];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -33,5 +41,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)addButtonPressed:(id)sender {
+    
+}
 
 @end

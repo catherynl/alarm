@@ -11,7 +11,7 @@
 
 @interface MusicViewController : UIViewController <MPMediaPickerControllerDelegate> 
 
-@property (weak, nonatomic) IBOutlet UIView *artworkImageView;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UISlider *volumeSlider;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 

@@ -19,8 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.datePicker.datePickerMode = UIDatePickerModeTime;
     self.musicPlayer = [MPMusicPlayerController systemMusicPlayer];
-//    [self.volumeSlider setValue:self.musicPlayer.value];
+    //    [self.volumeSlider setValue:self.musicPlayer.value];
     if ([musicPlayer playbackState] == MPMusicPlaybackStatePlaying) {
         [self.playPauseButton setImage:[UIImage imageNamed:@"pauseButton.png"] forState:UIControlStateNormal];
     } else {
@@ -60,7 +61,7 @@
  // Pass the selected object to the new view controller.
  }
  */
-    
+
 - (void) registerMediaPlayerNotifications
 {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -69,7 +70,7 @@
                            selector: @selector(handle_NowPlayingItemChanged:)
                                name: MPMusicPlayerControllerNowPlayingItemDidChangeNotification
                              object: self.musicPlayer];
-//    
+    //
     [notificationCenter addObserver: self
                            selector: @selector(handle_PlaybackStateChanged:)
                                name: MPMusicPlayerControllerPlaybackStateDidChangeNotification
@@ -86,14 +87,16 @@
 - (void) handle_NowPlayingItemChanged: (id) notification
 {
     MPMediaItem *currentItem = [musicPlayer nowPlayingItem];
-    UIImage *artworkImage = [UIImage imageNamed:@"noArtworkImage.png"];
-    MPMediaItemArtwork *artwork = [currentItem valueForProperty: MPMediaItemPropertyArtwork];
     
-    if (artwork) {
-        artworkImage = [artwork imageWithSize: CGSizeMake (200, 200)];
-    }
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:artworkImage];
-    [self.artworkImageView addSubview:imageView];
+    // Artwork image, no longer need
+//    UIImage *artworkImage = [UIImage imageNamed:@"noArtworkImage.png"];
+//    MPMediaItemArtwork *artwork = [currentItem valueForProperty: MPMediaItemPropertyArtwork];
+//    
+//    if (artwork) {
+//        artworkImage = [artwork imageWithSize: CGSizeMake (200, 200)];
+//    }
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:artworkImage];
+//    [self.artworkImageView addSubview:imageView];
     
     NSString *titleString = [currentItem valueForProperty:MPMediaItemPropertyTitle];
     if (titleString) {
@@ -119,6 +122,9 @@
 }
 
 // MARK: IBActions
+
+- (IBAction)setMusicTimePressed:(id)sender {
+}
 
 - (IBAction)volumeChanged:(id)sender {
     [self.musicPlayer setVolume:[self.volumeSlider value]];

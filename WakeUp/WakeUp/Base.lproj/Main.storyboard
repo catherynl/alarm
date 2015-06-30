@@ -28,11 +28,17 @@
                             <outlet property="delegate" destination="sXW-0n-DCO" id="pJ8-Vo-v7d"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Reminders" id="MbZ-4y-Whb"/>
+                    <navigationItem key="navigationItem" title="Reminders" id="66G-g8-3sU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ivH-Wv-EZu">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="sXW-0n-DCO" id="J0s-FH-oZG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2j-99-Qr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504" y="578"/>
+            <point key="canvasLocation" x="2244" y="578"/>
         </scene>
         <!--Music-->
         <scene sceneID="aSz-XT-X3P">
@@ -79,7 +85,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
                                 <rect key="frame" x="280" y="441" width="40" height="30"/>
                                 <state key="normal" image="playButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,7 +94,7 @@
                                     <action selector="playPause:" destination="sPw-0t-BLX" eventType="touchUpInside" id="5cf-oD-dLw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
                                 <rect key="frame" x="360" y="441" width="40" height="30"/>
                                 <state key="normal" image="NextButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,18 +103,17 @@
                                     <action selector="nextSong:" destination="sPw-0t-BLX" eventType="touchUpInside" id="EyV-WQ-tk9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
                                 <rect key="frame" x="191" y="441" width="40" height="30"/>
                                 <state key="normal" image="PreviousButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="previousSong:" destination="sPw-0t-BLX" eventType="touchUpInside" id="NnP-6j-s3M"/>
-                                    <action selector="showMediaPlayer:" destination="sPw-0t-BLX" eventType="touchUpInside" id="9Tj-z1-MZF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28y-HI-mT1">
-                                <rect key="frame" x="234" y="261" width="133" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28y-HI-mT1">
+                                <rect key="frame" x="234" y="325" width="133" height="30"/>
                                 <state key="normal" title="Show Media Picker">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -116,10 +121,21 @@
                                     <action selector="showMediaPicker:" destination="sPw-0t-BLX" eventType="touchUpInside" id="LeA-Au-u6g"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7oe-uu-uGm">
-                                <rect key="frame" x="200" y="28" width="200" height="200"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1rN-HZ-lmv">
+                                <rect key="frame" x="0.0" y="70" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="457390989.88766003">
+                                    <!--2015-06-30 21:03:09 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-cU-0Gq">
+                                <rect key="frame" x="247" y="273" width="107" height="30"/>
+                                <state key="normal" title="Set Music Time">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setMusicTimePressed:" destination="sPw-0t-BLX" eventType="touchUpInside" id="0K0-pr-9jZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.41110236700000002" green="0.82030338020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -128,17 +144,14 @@
                             <constraint firstItem="JxX-kg-d0a" firstAttribute="leading" secondItem="Lib-E3-TEu" secondAttribute="leading" id="HNg-dh-ZeH"/>
                             <constraint firstItem="Lib-E3-TEu" firstAttribute="leading" secondItem="RUK-GV-s7s" secondAttribute="leading" id="KI8-Mh-gCf"/>
                             <constraint firstItem="hof-oM-r0n" firstAttribute="leading" secondItem="urE-Vd-eiE" secondAttribute="trailing" constant="40" id="OsV-jz-Lcn"/>
-                            <constraint firstItem="hof-oM-r0n" firstAttribute="trailing" secondItem="7oe-uu-uGm" secondAttribute="trailing" id="a0u-VH-9vv"/>
                             <constraint firstItem="RUK-GV-s7s" firstAttribute="trailing" secondItem="85d-vR-wzq" secondAttribute="trailingMargin" id="apc-KB-SqO"/>
                             <constraint firstItem="RUK-GV-s7s" firstAttribute="trailing" secondItem="Kev-JR-hoR" secondAttribute="trailing" id="cfs-eu-th0"/>
                             <constraint firstItem="JxX-kg-d0a" firstAttribute="leading" secondItem="85d-vR-wzq" secondAttribute="leadingMargin" id="geb-9h-xvs"/>
                             <constraint firstItem="28y-HI-mT1" firstAttribute="centerX" secondItem="JxX-kg-d0a" secondAttribute="centerX" id="h4m-No-ZM6"/>
                             <constraint firstItem="RUK-GV-s7s" firstAttribute="trailing" secondItem="Lib-E3-TEu" secondAttribute="trailing" id="hqM-hC-V0e"/>
-                            <constraint firstItem="28y-HI-mT1" firstAttribute="centerX" secondItem="7oe-uu-uGm" secondAttribute="centerX" id="k5V-Ky-16y"/>
                             <constraint firstItem="Kev-JR-hoR" firstAttribute="top" secondItem="ZVo-Sc-L1z" secondAttribute="bottom" constant="31" id="k5m-lJ-I8y"/>
-                            <constraint firstItem="28y-HI-mT1" firstAttribute="top" secondItem="7oe-uu-uGm" secondAttribute="bottom" constant="33" id="mOj-kD-Vhw"/>
                             <constraint firstItem="urE-Vd-eiE" firstAttribute="top" secondItem="hof-oM-r0n" secondAttribute="top" id="niP-WR-h7k"/>
-                            <constraint firstItem="7oe-uu-uGm" firstAttribute="top" secondItem="yfX-VP-dyA" secondAttribute="bottom" constant="8" symbolic="YES" id="oOs-l4-ECB"/>
+                            <constraint firstAttribute="centerX" secondItem="1rN-HZ-lmv" secondAttribute="centerX" id="poo-1L-5aD"/>
                             <constraint firstItem="ZVo-Sc-L1z" firstAttribute="top" secondItem="urE-Vd-eiE" secondAttribute="top" id="qRe-Pn-YIG"/>
                             <constraint firstItem="urE-Vd-eiE" firstAttribute="leading" secondItem="ZVo-Sc-L1z" secondAttribute="trailing" constant="49" id="qfD-GJ-NyB"/>
                             <constraint firstItem="RUK-GV-s7s" firstAttribute="centerX" secondItem="urE-Vd-eiE" secondAttribute="centerX" id="tid-HK-dSS"/>
@@ -153,7 +166,7 @@
                     <connections>
                         <outlet property="albumLabel" destination="RUK-GV-s7s" id="p7Q-LF-M1P"/>
                         <outlet property="artistLabel" destination="Lib-E3-TEu" id="58l-rk-0e6"/>
-                        <outlet property="artworkImageView" destination="7oe-uu-uGm" id="Bok-HI-5m8"/>
+                        <outlet property="datePicker" destination="1rN-HZ-lmv" id="BrZ-Sc-B4r"/>
                         <outlet property="playPauseButton" destination="urE-Vd-eiE" id="U6o-nX-ek3"/>
                         <outlet property="titleLabel" destination="JxX-kg-d0a" id="6F1-Yc-RM1"/>
                         <outlet property="volumeSlider" destination="Kev-JR-hoR" id="Gwa-Z6-w0V"/>
@@ -565,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjN-PC-6Gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928" y="590"/>
+            <point key="canvasLocation" x="3740" y="590"/>
         </scene>
         <!--Alarm-->
         <scene sceneID="tne-QT-ifu">
@@ -644,13 +657,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Kcf-cb-Onm"/>
-                        <segue destination="sXW-0n-DCO" kind="relationship" relationship="viewControllers" id="HGn-iW-kJU"/>
+                        <segue destination="iDZ-x9-4rs" kind="relationship" relationship="viewControllers" id="HGn-iW-kJU"/>
                         <segue destination="sPw-0t-BLX" kind="relationship" relationship="viewControllers" id="kpG-fb-tr0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZu-g2-yye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="726" y="578"/>
+        </scene>
+        <!--Reminders-->
+        <scene sceneID="0bm-8J-s43">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iDZ-x9-4rs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" id="MbZ-4y-Whb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HPZ-K0-7DG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sXW-0n-DCO" kind="relationship" relationship="rootViewController" id="47I-wU-UuT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlE-XJ-xAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="578"/>
         </scene>
     </scenes>
     <resources>

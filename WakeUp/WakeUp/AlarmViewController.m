@@ -30,10 +30,10 @@
                                           otherButtonTitles:nil];
     [alert show];
     
-    UILocalNotification *note = [[UILocalNotification alloc] init];
-    note.alertBody = @"WAKE UP!";
-    note.fireDate = date;
-    [[UIApplication sharedApplication] scheduleLocalNotification:note];
+//    UILocalNotification *note = [[UILocalNotification alloc] init];
+//    note.alertBody = @"WAKE UP!";
+//    note.fireDate = date;
+//    [[UIApplication sharedApplication] scheduleLocalNotification:note];
     
     NSDate *currentDate = [NSDate date];
     NSInteger numberOfSecs = [date timeIntervalSinceDate:currentDate];
@@ -51,7 +51,15 @@
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
+    alert.delegate = self;
     [alert show];
+}
+
+// COME BACK HERE
+- (void)alertViewCancel:(UIAlertView *)alertView {
+    NSLog(@"Alert view cancelled");
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"chooseVC"];
 }
 
 - (void)viewDidLoad {

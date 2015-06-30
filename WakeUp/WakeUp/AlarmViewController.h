@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlarmViewController : UIViewController
+@interface AlarmViewController : UIViewController <UIAlertViewDelegate>
 
 
 @end

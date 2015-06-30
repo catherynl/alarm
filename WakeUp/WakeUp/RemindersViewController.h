@@ -10,4 +10,6 @@
 
 @interface RemindersViewController : UITableViewController
 
+@property (nonatomic, copy) NSArray *reminderItems;
+
 @end

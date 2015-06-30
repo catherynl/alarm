@@ -18,10 +18,10 @@
 		494BBD4F1B42054700D9C0F2 /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD4E1B42054700D9C0F2 /* MathViewController.m */; };
 		494BBD521B42F80200D9C0F2 /* TypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BBD511B42F80200D9C0F2 /* TypeViewController.m */; };
 		C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D61B41CF9300A037A3 /* RemindersViewController.m */; };
-		C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88D91B41CFD900A037A3 /* MusicViewController.m */; };
 		C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */; };
 		C12E88E01B4205B500A037A3 /* RemindersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */; };
 		C12E88E21B42117B00A037A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E88E11B42117B00A037A3 /* MediaPlayer.framework */; };
+		C156B78A1B43370B00B4D291 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C156B7891B43370B00B4D291 /* MusicViewController.m */; };
 		C1E35A331B42174000C5E48D /* NextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A2E1B42174000C5E48D /* NextButton.png */; };
 		C1E35A341B42174000C5E48D /* noArtworkImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A2F1B42174000C5E48D /* noArtworkImage.png */; };
 		C1E35A351B42174000C5E48D /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E35A301B42174000C5E48D /* pauseButton.png */; };
@@ -62,12 +62,12 @@
 		C12E88D51B41CF9300A037A3 /* RemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersViewController.h; sourceTree = "<group>"; };
 		C12E88D61B41CF9300A037A3 /* RemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersViewController.m; sourceTree = "<group>"; };
 		C12E88D81B41CFD900A037A3 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
-		C12E88D91B41CFD900A037A3 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		C12E88DB1B41EAAD00A037A3 /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
 		C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
 		C12E88DE1B4205B500A037A3 /* RemindersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersTableViewCell.h; sourceTree = "<group>"; };
 		C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersTableViewCell.m; sourceTree = "<group>"; };
 		C12E88E11B42117B00A037A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C156B7891B43370B00B4D291 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		C1E35A2E1B42174000C5E48D /* NextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextButton.png; sourceTree = "<group>"; };
 		C1E35A2F1B42174000C5E48D /* noArtworkImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noArtworkImage.png; sourceTree = "<group>"; };
 		C1E35A301B42174000C5E48D /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				C12E88DE1B4205B500A037A3 /* RemindersTableViewCell.h */,
 				C12E88DF1B4205B500A037A3 /* RemindersTableViewCell.m */,
 				C12E88D81B41CFD900A037A3 /* MusicViewController.h */,
-				C12E88D91B41CFD900A037A3 /* MusicViewController.m */,
+				C156B7891B43370B00B4D291 /* MusicViewController.m */,
 				C12E88DB1B41EAAD00A037A3 /* ChooseViewController.h */,
 				C12E88DC1B41EAAD00A037A3 /* ChooseViewController.m */,
 				494BBD4D1B42054700D9C0F2 /* MathViewController.h */,
@@ -281,10 +281,10 @@
 				494BBD521B42F80200D9C0F2 /* TypeViewController.m in Sources */,
 				494BBD4F1B42054700D9C0F2 /* MathViewController.m in Sources */,
 				C12E88D71B41CF9300A037A3 /* RemindersViewController.m in Sources */,
-				C12E88DA1B41CFD900A037A3 /* MusicViewController.m in Sources */,
 				494BBD121B41EA7900D9C0F2 /* DrawView.m in Sources */,
 				494BBCF31B41CC8300D9C0F2 /* AlarmViewController.m in Sources */,
 				C12E88DD1B41EAAD00A037A3 /* ChooseViewController.m in Sources */,
+				C156B78A1B43370B00B4D291 /* MusicViewController.m in Sources */,
 				494BBCF01B41CC8300D9C0F2 /* AppDelegate.m in Sources */,
 				494BBCED1B41CC8300D9C0F2 /* main.m in Sources */,
 				C12E88E01B4205B500A037A3 /* RemindersTableViewCell.m in Sources */,
