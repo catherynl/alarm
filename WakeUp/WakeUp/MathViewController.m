@@ -98,5 +98,14 @@ NSString *symbol;
     }
     self.questionLabel.text = [NSString stringWithFormat:@"What is %d %@ %d?", (int)num1, symbol, (int)num2];
 }
-    
+
+/*
+- (void)singleTap:(UIGestureRecognizer *)gestureRecognizer {
+    NSLog(@"Single tap!");
+    //    [self becomeFirstResponder];
+    //[textField resignFirstResponder];
+}
+ */
+
+
 @end

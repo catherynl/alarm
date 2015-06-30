@@ -79,7 +79,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
                                 <rect key="frame" x="280" y="441" width="40" height="30"/>
                                 <state key="normal" image="playButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,7 +88,7 @@
                                     <action selector="playPause:" destination="sPw-0t-BLX" eventType="touchUpInside" id="5cf-oD-dLw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
                                 <rect key="frame" x="360" y="441" width="40" height="30"/>
                                 <state key="normal" image="NextButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,7 +97,7 @@
                                     <action selector="nextSong:" destination="sPw-0t-BLX" eventType="touchUpInside" id="EyV-WQ-tk9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
                                 <rect key="frame" x="191" y="441" width="40" height="30"/>
                                 <state key="normal" image="PreviousButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,7 +116,7 @@
                                     <action selector="showMediaPicker:" destination="sPw-0t-BLX" eventType="touchUpInside" id="LeA-Au-u6g"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oe-uu-uGm">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7oe-uu-uGm">
                                 <rect key="frame" x="200" y="28" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -247,29 +247,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97C-My-HwQ" customClass="DrawView">
-                                <rect key="frame" x="16" y="203" width="568" height="377"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1W-uvp">
-                                        <rect key="frame" x="482" y="13" width="78" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="78" id="qZi-r9-abA"/>
-                                            <constraint firstAttribute="height" constant="42" id="u5z-bL-nFk"/>
-                                        </constraints>
-                                        <state key="normal" title="Clear">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clearButtonIsPressed:" destination="gvC-u4-pvp" eventType="touchUpInside" id="qVI-bB-Lhp"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="wFp-1W-uvp" firstAttribute="top" secondItem="97C-My-HwQ" secondAttribute="top" constant="13" id="6Zo-Ar-jlz"/>
-                                    <constraint firstAttribute="trailing" secondItem="wFp-1W-uvp" secondAttribute="trailing" constant="8" id="JlR-hK-MA4"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whP-US-54S">
                                 <rect key="frame" x="368" y="129" width="69" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -294,6 +271,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97C-My-HwQ" customClass="DrawView">
+                                <rect key="frame" x="16" y="203" width="568" height="377"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1W-uvp">
+                                        <rect key="frame" x="482" y="13" width="78" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="78" id="qZi-r9-abA"/>
+                                            <constraint firstAttribute="height" constant="42" id="u5z-bL-nFk"/>
+                                        </constraints>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearButtonIsPressed:" destination="gvC-u4-pvp" eventType="touchUpInside" id="qVI-bB-Lhp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wFp-1W-uvp" firstAttribute="top" secondItem="97C-My-HwQ" secondAttribute="top" constant="13" id="6Zo-Ar-jlz"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFp-1W-uvp" secondAttribute="trailing" constant="8" id="JlR-hK-MA4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.81913329729999995" green="0.96749316350000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -314,7 +314,6 @@
                         </constraints>
                         <connections>
                             <action selector="backgroundTapped:" destination="gvC-u4-pvp" eventType="touchUpInside" id="7xQ-jq-gjA"/>
-                            <action selector="drawViewTapped:" destination="gvC-u4-pvp" eventType="touchUpInside" id="lhz-ry-MFF"/>
                         </connections>
                     </view>
                     <connections>
@@ -435,29 +434,32 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJZ-uP-MWg">
-                                <rect key="frame" x="163" y="289" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.81913329729999995" green="0.96749316350000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4G-Jk-Ahn">
                                 <rect key="frame" x="275" y="289" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.81913329729999995" green="0.96749316350000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="checkCLetter" destination="Twj-pG-PQR" eventType="editingDidEnd" id="sCV-Bg-cy5"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Emc-fC-ORm">
                                 <rect key="frame" x="383.5" y="289" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.81913329729999995" green="0.96749316350000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="checkDLetter" destination="Twj-pG-PQR" eventType="editingDidEnd" id="moS-D9-TMX"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umz-iB-z9F">
                                 <rect key="frame" x="493" y="289" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.81913329729999995" green="0.96749316350000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="checkELetter" destination="Twj-pG-PQR" eventType="editingDidEnd" id="jyk-46-tbe"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gvc-rM-fLq">
                                 <rect key="frame" x="53" y="289" width="50" height="50"/>
@@ -476,6 +478,19 @@
                                         <exclude reference="Y6u-1g-Gid"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="checkALetter" destination="Twj-pG-PQR" eventType="editingDidEnd" id="6ed-2H-bWd"/>
+                                    <action selector="editChangedA:" destination="Twj-pG-PQR" eventType="editingChanged" id="LlF-Sm-BKz"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJZ-uP-MWg">
+                                <rect key="frame" x="163" y="289" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.81913329729999995" green="0.96749316350000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="checkBLetter" destination="Twj-pG-PQR" eventType="editingDidEnd" id="7PB-6b-bSi"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

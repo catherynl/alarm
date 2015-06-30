@@ -61,13 +61,89 @@
             self.eLabel.text = str;
         }
     }
-    /*
+    
     self.aField.text = @"";
     self.bField.text = @"";
     self.cField.text = @"";
     self.dField.text = @"";
     self.eField.text = @"";
-     */
+    
 }
+- (IBAction)editChangedA:(id)sender {
+    [self setABlue];
+}
+
+- (void)setABlue {
+    if (self.aField.text.length == 0) {
+        self.aField.backgroundColor = [UIColor blueColor];
+    }
+}
+
+- (IBAction)checkALetter {
+    [self correctALetter];
+}
+- (IBAction)ds:(id)sender {
+}
+
+- (IBAction)checkBLetter {
+    [self correctBLetter];
+}
+
+- (IBAction)checkCLetter {
+    [self correctCLetter];
+}
+
+- (IBAction)checkDLetter {
+    [self correctDLetter];
+}
+
+- (IBAction)checkELetter {
+    [self correctELetter];
+}
+
+- (void)correctALetter {
+    if ([self.aLabel.text isEqualToString:self.aField.text]) {
+        self.aField.backgroundColor = [UIColor greenColor];
+    } else if (self.aField.text.length > 0) {
+        self.aField.backgroundColor = [UIColor redColor];
+    } else {
+        self.aField.backgroundColor = [UIColor blueColor];
+    }
+}
+
+- (void)correctBLetter {
+    if ([self.bLabel.text isEqualToString:self.bField.text]) {
+        self.bField.backgroundColor = [UIColor greenColor];
+    } else if (self.bField.text.length > 0) {
+        self.bField.backgroundColor = [UIColor redColor];
+    }
+}
+
+- (void)correctCLetter {
+    if ([self.cLabel.text isEqualToString:self.cField.text]) {
+        self.cField.backgroundColor = [UIColor greenColor];
+    } else if (self.cField.text.length > 0) {
+        self.cField.backgroundColor = [UIColor redColor];
+    }
+}
+
+- (void)correctDLetter {
+    if ([self.dLabel.text isEqualToString:self.dField.text]) {
+        self.dField.backgroundColor = [UIColor greenColor];
+    } else if (self.dField.text.length > 0) {
+        self.dField.backgroundColor = [UIColor redColor];
+    }
+}
+
+- (void)correctELetter {
+    if ([self.eLabel.text isEqualToString:self.eField.text]) {
+        self.eField.backgroundColor = [UIColor greenColor];
+    } else if (self.eField.text.length > 0) {
+        self.eField.backgroundColor = [UIColor redColor];
+    }
+}
+
+
+
 
 @end
