@@ -46,4 +46,27 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    NSLog(@"Launched from local notification.");
+    if (application.applicationState == UIApplicationStateActive) {
+        UIAlertView *alertView =
+        [[UIAlertView alloc] initWithTitle:notification.alertAction
+                                   message:notification.alertBody
+                                  delegate:nil
+                         cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                         otherButtonTitles:nil];
+        
+//        if (!self.localNotificationSound) {
+//            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"Sosumi"
+//                                                      withExtension:@"wav"];
+//            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &_localNotificationSound);
+//        }
+//        AudioServicesPlaySystemSound(self.localNotificationSound);
+//        
+        [alertView show];
+    }
+}
+
 @end

@@ -31,11 +31,28 @@
     [alert show];
     
     UILocalNotification *note = [[UILocalNotification alloc] init];
-    note.alertBody = @"Alarm set!";
+    note.alertBody = @"WAKE UP!";
     note.fireDate = date;
     [[UIApplication sharedApplication] scheduleLocalNotification:note];
+    
+    NSDate *currentDate = [NSDate date];
+    NSInteger numberOfSecs = [date timeIntervalSinceDate:currentDate];
+    [NSTimer scheduledTimerWithTimeInterval:numberOfSecs
+                                     target:self
+                                   selector:@selector(timerWentOff)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
+- (void)timerWentOff {
+    NSLog(@"Timer went off");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"WAKE UP!"
+                                                    message:@"It's morning! Time to do some thinking."
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
