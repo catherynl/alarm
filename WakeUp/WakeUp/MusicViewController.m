@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.datePicker.datePickerMode = UIDatePickerModeTime;
+    self.datePicker.datePickerMode = UIDatePickerModeCountDownTimer;
     self.musicPlayer = [MPMusicPlayerController systemMusicPlayer];
     //    [self.volumeSlider setValue:self.musicPlayer.value];
     if ([musicPlayer playbackState] == MPMusicPlaybackStatePlaying) {
@@ -30,7 +30,6 @@
         [self.playPauseButton setImage:[UIImage imageNamed:@"playButton.png"] forState:UIControlStateNormal];
     }
     [self registerMediaPlayerNotifications];
-    self.setMusicTimeButton.titleLabel.text = @"Set Music Timer";
     self.titleLabel.text = @"Title: unselected";
     self.artistLabel.text = @"Artist: unselected";
     self.albumLabel.text = @"Album: unselected";
@@ -130,14 +129,15 @@
 // MARK: IBActions
 
 - (IBAction)setMusicTimePressed:(id)sender {
-    NSDate *date = self.datePicker.date;
-    NSLog(@"Set music to stop at %@", date);
-    self.setMusicTimeButton.titleLabel.text = [NSString stringWithFormat:@"Set music timer: %@", date];
-    NSDate *currentDate = [NSDate date];
-    NSInteger timeInterval = [date timeIntervalSinceDate:currentDate];
+//    NSDate *date = self.datePicker.date;
+//    NSLog(@"Set music to stop at %@", date);
+//    self.setMusicTimeButton.titleLabel.text = [NSString stringWithFormat:@"Set music timer: %@", date];
+//    NSDate *currentDate = [NSDate date];
+    NSInteger timeInterval = [self.datePicker countDownDuration];
+    NSLog(@"Set music to stop: %lu", (long)timeInterval);
     [NSTimer scheduledTimerWithTimeInterval:timeInterval
                                      target:self
-                                   selector:@selector(handle_PlaybackStateChanged:)
+                                   selector:@selector(musicTimerOff:)
                                    userInfo:nil
                                     repeats:NO];
 }
@@ -175,7 +175,12 @@
 
 // MARK: Handle actions
 
-- (void) mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection
+- (void)musicTimerOff:(id)sender {
+    NSLog(@"Music timer went off");
+    [self handle_PlaybackStateChanged:sender];
+}
+
+- (void)mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection
 {
     if (mediaItemCollection) {
         [musicPlayer setQueueWithItemCollection: mediaItemCollection];
@@ -184,12 +189,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) mediaPickerDidCancel: (MPMediaPickerController *) mediaPicker
+- (void)mediaPickerDidCancel: (MPMediaPickerController *) mediaPicker
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) handle_PlaybackStateChanged: (id) notification {
+- (void)handle_PlaybackStateChanged: (id) notification {
     MPMusicPlaybackState playbackState = [musicPlayer playbackState];
     if (playbackState == MPMusicPlaybackStatePaused) {
         [self.playPauseButton setImage:[UIImage imageNamed:@"playButton.png"] forState:UIControlStateNormal];
@@ -204,7 +209,7 @@
     }
 }
 
-- (void) handle_VolumeChanged: (id) notification {
+- (void)handle_VolumeChanged: (id) notification {
     [self.volumeSlider setValue:[musicPlayer volume]];
 }
 

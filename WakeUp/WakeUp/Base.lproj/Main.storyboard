@@ -12,7 +12,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mom-sZ-8Lv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.89981453786607557" green="0.776058025718799" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92016284131175652" green="0.82783634613285439" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RemindersViewCell" id="v5g-ec-GXT" customClass="RemindersTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="600" height="44"/>
@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="height" constant="21" id="3Pn-Z4-7en"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lib-E3-TEu" userLabel="Artist">
@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="21" id="TaL-XR-rOY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUK-GV-s7s" userLabel="Album">
@@ -82,7 +82,7 @@
                                     <constraint firstAttribute="height" constant="21" id="EVl-JP-dis"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
@@ -103,30 +103,6 @@
                                     <action selector="nextSong:" destination="sPw-0t-BLX" eventType="touchUpInside" id="EyV-WQ-tk9"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1rN-HZ-lmv">
-                                <rect key="frame" x="0.0" y="70" width="600" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="457390989.88766003">
-                                    <!--2015-06-30 21:03:09 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-cU-0Gq">
-                                <rect key="frame" x="234" y="259" width="133" height="30"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="setMusicTimePressed:" destination="sPw-0t-BLX" eventType="touchUpInside" id="0K0-pr-9jZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28y-HI-mT1">
-                                <rect key="frame" x="234" y="297" width="133" height="30"/>
-                                <state key="normal" title="Show Media Picker">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showMediaPicker:" destination="sPw-0t-BLX" eventType="touchUpInside" id="LeA-Au-u6g"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
                                 <rect key="frame" x="211" y="441" width="40" height="30"/>
                                 <state key="normal" image="PreviousButton.png">
@@ -136,8 +112,34 @@
                                     <action selector="previousSong:" destination="sPw-0t-BLX" eventType="touchUpInside" id="NnP-6j-s3M"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1rN-HZ-lmv">
+                                <rect key="frame" x="0.0" y="70" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="457390989.88766003">
+                                    <!--2015-06-30 21:03:09 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-cU-0Gq">
+                                <rect key="frame" x="225" y="259" width="150" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Set Music Timer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setMusicTimePressed:" destination="sPw-0t-BLX" eventType="touchUpInside" id="0K0-pr-9jZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28y-HI-mT1">
+                                <rect key="frame" x="225" y="297" width="150" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="  Show Media Picker  ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMediaPicker:" destination="sPw-0t-BLX" eventType="touchUpInside" id="LeA-Au-u6g"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.55514153379686515" green="0.8935406327275599" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.75653470393964628" green="0.90703617035979811" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="28y-HI-mT1" firstAttribute="top" secondItem="iWI-cU-0Gq" secondAttribute="bottom" constant="8" symbolic="YES" id="0Ym-8Q-maL"/>
                             <constraint firstItem="urE-Vd-eiE" firstAttribute="leading" secondItem="ZVo-Sc-L1z" secondAttribute="trailing" constant="29" id="3ct-Ge-LIZ"/>
@@ -599,31 +601,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-zk-Wlk">
-                                <rect key="frame" x="267" y="441" width="67" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2ct-9l-SOv"/>
-                                </constraints>
-                                <state key="normal" title="Set Alarm"/>
+                                <rect key="frame" x="258" y="300" width="85" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="  Set Alarm  ">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="setAlarmButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPj-gz-QbE"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0FS-b7-bJP">
                                 <rect key="frame" x="12" y="90" width="576" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="xiZ-cJ-vji"/>
-                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="457298136.90135199">
                                     <!--2015-06-29 19:15:36 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8V-CN-3uc">
-                                <rect key="frame" x="261" y="348" width="78" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="5mW-cV-kcO"/>
-                                    <constraint firstAttribute="height" constant="30" id="ejC-oj-pw0"/>
-                                </constraints>
-                                <state key="normal" title="Choose VC">
+                                <rect key="frame" x="253" y="449" width="95" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="  Choose VC  ">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -631,15 +628,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.6437937904487796" green="0.96006944444444442" blue="0.856694696023379" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.68961407802642327" green="0.96006944444444442" blue="0.83177615122829462" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rWu-zk-Wlk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1rt-IA-Aq2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0FS-b7-bJP" secondAttribute="trailing" constant="-4" id="OGo-fu-lq0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rWu-zk-Wlk" secondAttribute="bottom" constant="80" id="Ovx-1J-Kam"/>
-                            <constraint firstItem="V8V-CN-3uc" firstAttribute="top" secondItem="0FS-b7-bJP" secondAttribute="top" constant="258" id="UbX-Sb-oJw"/>
-                            <constraint firstAttribute="centerX" secondItem="V8V-CN-3uc" secondAttribute="centerX" id="hLv-mV-iBp"/>
-                            <constraint firstItem="0FS-b7-bJP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="kH6-M7-vRf"/>
-                            <constraint firstItem="0FS-b7-bJP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="vpG-GX-Lcc"/>
+                            <constraint firstItem="0FS-b7-bJP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="4y4-6e-Ie5"/>
+                            <constraint firstItem="V8V-CN-3uc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7r8-VA-mnz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V8V-CN-3uc" secondAttribute="bottom" constant="72" id="KaE-Sg-y7z"/>
+                            <constraint firstItem="0FS-b7-bJP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="VaS-on-jTP"/>
+                            <constraint firstItem="rWu-zk-Wlk" firstAttribute="centerX" secondItem="V8V-CN-3uc" secondAttribute="centerX" id="W7f-gz-toH"/>
+                            <constraint firstItem="rWu-zk-Wlk" firstAttribute="top" secondItem="0FS-b7-bJP" secondAttribute="bottom" constant="48" id="ayF-wp-bAI"/>
+                            <constraint firstItem="0FS-b7-bJP" firstAttribute="centerX" secondItem="rWu-zk-Wlk" secondAttribute="centerX" id="frR-bu-gGs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alarm" image="alarmIcon2.png" id="Fof-XI-nG5"/>
