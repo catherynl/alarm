@@ -73,7 +73,7 @@ NSString *symbol;
         self.resultLabel.text = @"Can shut off alarm now";
         NSLog(@"Shutting off alarm, going to reminders");
         UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"reminderVC"];
+        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"navreminderVC"];
         [self.view endEditing:YES];
     }
 }

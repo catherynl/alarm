@@ -85,7 +85,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urE-Vd-eiE">
                                 <rect key="frame" x="280" y="441" width="40" height="30"/>
                                 <state key="normal" image="playButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,7 +94,7 @@
                                     <action selector="playPause:" destination="sPw-0t-BLX" eventType="touchUpInside" id="5cf-oD-dLw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hof-oM-r0n">
                                 <rect key="frame" x="360" y="441" width="40" height="30"/>
                                 <state key="normal" image="NextButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,7 +103,7 @@
                                     <action selector="nextSong:" destination="sPw-0t-BLX" eventType="touchUpInside" id="EyV-WQ-tk9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVo-Sc-L1z">
                                 <rect key="frame" x="191" y="441" width="40" height="30"/>
                                 <state key="normal" image="PreviousButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -668,7 +668,7 @@
         <!--Reminders-->
         <scene sceneID="0bm-8J-s43">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iDZ-x9-4rs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navreminderVC" automaticallyAdjustsScrollViewInsets="NO" id="iDZ-x9-4rs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reminders" id="MbZ-4y-Whb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HPZ-K0-7DG">

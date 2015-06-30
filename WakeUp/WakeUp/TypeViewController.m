@@ -177,9 +177,8 @@
         self.cField.backgroundColor == [UIColor greenColor] &&
         self.dField.backgroundColor == [UIColor greenColor] &&
         self.eField.backgroundColor == [UIColor greenColor]) {
-        NSLog(@"all green");
         UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"reminderVC"];
+        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"navreminderVC"];
         [self.view endEditing:YES];
     }
 }
