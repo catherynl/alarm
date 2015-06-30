@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface MathViewController : UIViewController <UITextFieldDelegate>
-@property (nonatomic) BOOL readyToSwitch;
 @end

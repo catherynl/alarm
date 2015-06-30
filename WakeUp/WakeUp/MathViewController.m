@@ -72,7 +72,6 @@ NSString *symbol;
     if (_rightCount >= 5) {
         self.resultLabel.text = @"Can shut off alarm now";
         NSLog(@"Shutting off alarm, going to reminders");
-        _readyToSwitch = YES;
         UIWindow *window = [[UIApplication sharedApplication] keyWindow];
         window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"reminderVC"];
         [self.view endEditing:YES];

@@ -71,34 +71,62 @@
 }
 - (IBAction)editChangedA:(id)sender {
     [self setABlue];
+    [self correctALetter];
+    [self allGreen];
+}
+
+- (IBAction)editChangedB:(id)sender {
+    [self setBBlue];
+    [self correctBLetter];
+    [self allGreen];
+}
+
+- (IBAction)editChangedC:(id)sender {
+    [self setCBlue];
+    [self correctCLetter];
+    [self allGreen];
+}
+
+- (IBAction)editChangedD:(id)sender {
+    [self setDBlue];
+    [self correctDLetter];
+    [self allGreen];
+}
+
+- (IBAction)editChangedE:(id)sender {
+    [self setEBlue];
+    [self correctELetter];
+    [self allGreen];
 }
 
 - (void)setABlue {
     if (self.aField.text.length == 0) {
-        self.aField.backgroundColor = [UIColor blueColor];
+        self.aField.backgroundColor = [UIColor lightGrayColor];
     }
 }
 
-- (IBAction)checkALetter {
-    [self correctALetter];
-}
-- (IBAction)ds:(id)sender {
-}
-
-- (IBAction)checkBLetter {
-    [self correctBLetter];
+- (void)setBBlue {
+    if (self.bField.text.length == 0) {
+        self.bField.backgroundColor = [UIColor lightGrayColor];
+    }
 }
 
-- (IBAction)checkCLetter {
-    [self correctCLetter];
+- (void)setCBlue {
+    if (self.cField.text.length == 0) {
+        self.cField.backgroundColor = [UIColor lightGrayColor];
+    }
 }
 
-- (IBAction)checkDLetter {
-    [self correctDLetter];
+- (void)setDBlue {
+    if (self.dField.text.length == 0) {
+        self.dField.backgroundColor = [UIColor lightGrayColor];
+    }
 }
 
-- (IBAction)checkELetter {
-    [self correctELetter];
+- (void)setEBlue {
+    if (self.eField.text.length == 0) {
+        self.eField.backgroundColor = [UIColor lightGrayColor];
+    }
 }
 
 - (void)correctALetter {
@@ -143,7 +171,22 @@
     }
 }
 
+- (void)allGreen {
+    if (self.aField.backgroundColor == [UIColor greenColor] &&
+        self.bField.backgroundColor == [UIColor greenColor] &&
+        self.cField.backgroundColor == [UIColor greenColor] &&
+        self.dField.backgroundColor == [UIColor greenColor] &&
+        self.eField.backgroundColor == [UIColor greenColor]) {
+        NSLog(@"all green");
+        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+        window.rootViewController = [window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"reminderVC"];
+        [self.view endEditing:YES];
+    }
+}
 
+- (IBAction)backgroundTapped:(id)sender {
+    [self.view endEditing:YES];
+}
 
 
 @end
